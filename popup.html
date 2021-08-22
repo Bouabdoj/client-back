@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Client-back</title>
+            <link rel="stylesheet" href="popup.css">
+            <script src="jquery-3.5.1-min.js"></script>
+            <script src="popup.js"></script>
+            <style>
+              body{
+                min-width: 500px;
+              }
+            </style>
+
+        </head>
+
+        <body>
+            <h2> Client-Back</h2>
+
+            <h3>Add Compartment: 
+                <span> 
+                  <input type="text" id="new_compartment" size="8px">
+                </span>
+                <span>
+                  <input type="submit" id="insert_comparment" value="Add Compartment"/> 
+                </span>
+            </h3>
+
+            <h3>Add Profile: 
+              <span> 
+                <input type="text" id="new_profile" size="8px"> 
+                <!-- issue01: when add a letter, the items is the dropbox are not reset before populated-->
+              </span>
+
+              <span>    
+                <select name="selected_compartment_to_add_profile" id="selected_compartment_to_add_profile"></select> 
+                
+              </span>
+
+              <span>
+                <input type="submit" id="insert_profile" value="Add Profile"/>
+              </span>
+            </h3>
+
+            <h3>Add domain: 
+              <span> 
+                <input type="text" id="new_domain" size="8px">
+                <!-- issue02: when add a letter, the items is the dropbox are not reset before populated-->
+              </span>
+
+              <span>    
+                <select name="selected_compartment_to_add_domain" id="selected_compartment_to_add_domain"></select>
+              </span>
+
+              <span>    
+                <select name="selected_profile_to_add_domain" id="selected_profile_to_add_domain"></select>
+              </span>
+
+              <span>
+                <input type="submit" id="insert_domain" value="Add Domain"/>
+              </span>
+
+            
+            <!-- Cascading Selection-->
+     <!--    
+            </h3>
+            <h3>Select Compartment: 
+              <span>    
+              <select name="selected_compartment" id="selected_compartment"></select>
+              </span>
+            </h3>
+
+            <h3>Select Profile: 
+              <span>  
+                <select name="selected_profile" id="selected_profile"></select>
+              </span>
+            </h3> -->
+
+         <h3>Select Domain: 
+              <span>  
+                <select name="selected_domain" id="selected_domain"></select>
+              </span>
+            </h3> 
+         
+            <input type="submit" id="filter_domain" value="Filter domains"/>
+
+            <h3>View Profile Tree</h3>
+            <div id="renderList" class="renderlist"></div>
+
+        </body>
+    </html>
+    
